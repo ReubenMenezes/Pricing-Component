@@ -1,0 +1,56 @@
+// Reorganise this shit stylesheet
+
+
+@use "variables" as *;
+@forward 'card';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+body {
+  background-color: $verylightgb;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  color: $darkgb;
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: $lightgb;
+    user-select: none;
+  }
+}
+
+.toggle {
+  margin-inline: 20px;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 5rem;
+  position: relative;
+  background: hsl(237, 63%, 64%);
+  cursor: pointer;
+  .ball {
+    background-color: white;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+
+    &--active {
+        background-color: white;
+        position: absolute;
+        width:1.5rem;
+        height:1.5rem;
+        top:0.25rem;
+        left:2.25rem;
+        border-radius: 50%;
+    }
+  }
+}

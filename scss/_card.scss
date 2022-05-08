@@ -1,0 +1,26 @@
+@forward "reset";
+@use "variables" as *;
+
+%btn {
+  border: 0;
+  outline: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  $cards: basic, pro, master;
+  border: 1px solid #333; // @each $card in $cards {
+  //   .#{$card} {
+
+  //   }
+  // }
+
+  &__btn {
+    background-image: $gradient-bg;
+    @extend %btn;
+  }
+}
